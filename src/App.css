@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: rgb(224, 224, 224);
+}
+
+:root {
+  --global_blue:rgb(51, 51, 105);
+  --global_fontSize: 25px;
+  --global_backgroundColor: #1c1e1a;
+}
+
+h1 {
+  font-size: 70px;
+  color: rgb(199, 199, 199);
+}
+
+p {
+  font-size: 20px;
+  color: rgb(197, 197, 197);
+}
+
+body,
+html {
+  max-width: 1600px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+/* Media query for screens below 1500px */
+@media (max-width: 1650px) {
+  h1 {
+    font-size: 50px; /* Scaled down from 70px */
+  }
+  p {
+    font-size: 18px; /* Scaled down from 20px */
+  }
+  body,
+  html {
+    max-width: 95%; /* Reduce max-width slightly for smaller screens */
+    margin-top: 20px; /* Adjust top margin */
+  }
+}
+body {
+  background-color: var(--global_backgroundColor);
+  position: relative;
+}
+
+.Navbar {
+  display: flex;
+  border: 2px solid white;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px;
+  /* Media Query for Smaller Screens */
+}
+.Navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+  align-items: center;
+}
+.Navbar li {
+  list-style-type: none;
+  font-size: var(--global_fontSize);
+  width: auto;
+  text-align: center;
+  box-sizing: content-box;
+  padding: 10px;
+  display: flex;
+  align-items: center; /* Aligns text and image in the same line */
+}
+.Navbar li:hover {
+  background-color: #42453f;
+  border: 1px solid #42453f;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.Navbar .logo {
+  pointer-events: none;
+}
+.Navbar img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 10px;
+}
+.Navbar button {
+  padding: 10px;
+  font-size: var(--global_fontSize);
+  background-color: #535978;
+  border: 2px solid #7c85ae;
+  border-radius: 10px;
+  max-height: 75px;
+  box-shadow: 0px 0px 10px 5px #3f497c; /* Red Glow */
+}
+.Navbar .hamburger_menu {
+  display: none;
+}
+@media (max-width: 1400px) {
+  .Navbar ul li, .Navbar button {
+    font-size: calc(var(--global_fontSize) * 0.8);
+  }
+}
+@media (max-width: 900px) {
+  .Navbar .Navbar {
+    align-items: start;
+  }
+  .Navbar ul {
+    flex-direction: column;
+    width: 100%; /* Full width for stacked layout */
+    padding: 10px;
+    align-items: center;
+  }
+  .Navbar ul.close {
+    display: none;
+  }
+  .Navbar li {
+    margin: 10px 0; /* Add vertical spacing between items */
+  }
+  .Navbar button {
+    font-size: calc(var(--global_fontSize) * 0.7);
+    align-self: flex-start;
+    margin-left: 0;
+  }
+  .Navbar img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px; /* Add spacing for stacked layout */
+  }
+  .Navbar .hamburger_menu {
+    display: block;
+  }
+}/*# sourceMappingURL=App.css.map */
