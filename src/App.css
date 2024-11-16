@@ -2,16 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   padding: 0;
-  margin: 0px;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: rgb(224, 224, 224);
 }
 
 :root {
-  --global_blue:rgb(51, 51, 105);
   --global_fontSize: 25px;
-  --global_backgroundColor: #1c1e1a;
 }
 
 h1 {
@@ -31,23 +29,19 @@ html {
   margin-top: 25px;
 }
 
-/* Media query for screens below 1500px */
-@media (max-width: 1650px) {
-  h1 {
-    font-size: 50px; /* Scaled down from 70px */
-  }
-  p {
-    font-size: 18px; /* Scaled down from 20px */
-  }
-  body,
-  html {
-    max-width: 95%; /* Reduce max-width slightly for smaller screens */
-    margin-top: 20px; /* Adjust top margin */
-  }
-}
 body {
-  background-color: var(--global_backgroundColor);
+  background-color: #1c1e1a;
   position: relative;
+}
+
+.global_button {
+  padding: 10px;
+  font-size: 25px;
+  background-color: #535978;
+  border: 2px solid #7c85ae;
+  border-radius: 10px;
+  max-height: 75px;
+  box-shadow: 0px 0px 10px 5px #3f497c;
 }
 
 .Navbar {
@@ -57,7 +51,6 @@ body {
   justify-content: space-around;
   align-items: center;
   border-radius: 30px;
-  /* Media Query for Smaller Screens */
 }
 .Navbar ul {
   display: flex;
@@ -65,17 +58,20 @@ body {
   width: 75%;
   align-items: center;
 }
-.Navbar li {
+.Navbar ul .nav-link {
+  text-decoration: none;
+}
+.Navbar ul li {
   list-style-type: none;
-  font-size: var(--global_fontSize);
+  font-size: 25px;
   width: auto;
   text-align: center;
   box-sizing: content-box;
   padding: 10px;
   display: flex;
-  align-items: center; /* Aligns text and image in the same line */
+  align-items: center;
 }
-.Navbar li:hover {
+.Navbar ul li:hover {
   background-color: #42453f;
   border: 1px solid #42453f;
   border-radius: 20px;
@@ -92,50 +88,236 @@ body {
      object-fit: cover;
   margin-right: 10px;
 }
-.Navbar button {
-  padding: 10px;
-  font-size: var(--global_fontSize);
-  background-color: #535978;
-  border: 2px solid #7c85ae;
-  border-radius: 10px;
-  max-height: 75px;
-  box-shadow: 0px 0px 10px 5px #3f497c; /* Red Glow */
-}
 .Navbar .hamburger_menu {
   display: none;
 }
+
+@media (max-width: 1650px) {
+  h1 {
+    font-size: 50px;
+  }
+  p {
+    font-size: 18px;
+  }
+  body,
+  html {
+    max-width: 95%;
+    margin-top: 20px;
+  }
+}
 @media (max-width: 1400px) {
-  .Navbar ul li, .Navbar button {
-    font-size: calc(var(--global_fontSize) * 0.8);
+  .Navbar ul li,
+  button {
+    font-size: 20px;
   }
 }
 @media (max-width: 900px) {
-  .Navbar .Navbar {
+  .Navbar {
     align-items: start;
   }
   .Navbar ul {
     flex-direction: column;
-    width: 100%; /* Full width for stacked layout */
+    width: 100%;
     padding: 10px;
     align-items: center;
   }
   .Navbar ul.close {
     display: none;
   }
-  .Navbar li {
-    margin: 10px 0; /* Add vertical spacing between items */
+  .Navbar ul li {
+    margin: 10px 0;
   }
   .Navbar button {
-    font-size: calc(var(--global_fontSize) * 0.7);
+    font-size: 17.5px;
     align-self: flex-start;
     margin-left: 0;
   }
   .Navbar img {
     height: 50px;
     width: 50px;
-    margin-bottom: 10px; /* Add spacing for stacked layout */
+    margin-bottom: 10px;
   }
   .Navbar .hamburger_menu {
     display: block;
   }
+}
+.homepage {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  background-color: #1c1e1a;
+}
+.homepage button {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: #1c1e1a;
+  font-size: 22.5px;
+}
+.homepage section {
+  bottom: 20%;
+  height: 80%;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+.homepage section h1 {
+  padding-bottom: 20px;
+  font-size: 4rem;
+}
+.homepage section p {
+  font-size: 0.9rem;
+}
+.homepage .wrapper {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  right: 25%;
+  bottom: 5%;
+  z-index: 1;
+}
+.homepage .wrapper .circle {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background-image: url("https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/14789/soccer-ball-sports-clipart-md.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle7124 0.5s alternate infinite ease;
+}
+.homepage .wrapper .circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.homepage .wrapper .circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+.homepage .wrapper .shadow {
+  width: 50px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 180px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 30%;
+  filter: blur(1px);
+  animation: shadow046 0.5s alternate infinite ease;
+}
+.homepage .wrapper .shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+.homepage .wrapper .shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+.homepage span {
+  background-image: linear-gradient(45deg, white, rgba(156, 156, 156, 0.1));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.homepage .goal_img {
+  width: 50%;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 100px;
+    border-radius: 50px 50px 25px 25px;
+  }
+  40% {
+    border-radius: 50%;
+  }
+  100% {
+    transform: rotate(40deg);
+    top: 0%;
+  }
+}
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+.about_page {
+  height: 90vh;
+}
+.about_page .about_container {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.about_page .about_container .heading {
+  width: 40%;
+  text-align: left;
+}
+.about_page .about_container .heading .achievement {
+  margin-top: 20px;
+  box-shadow: 1px 1px 10px rgb(166, 166, 166);
+  border-radius: 10px;
+  padding: 10px;
+}
+.about_page .about_container h1 {
+  font-size: 36px;
+  stroke-width: 1px;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+  -webkit-text-stroke-color: rgb(150, 150, 172);
+  stroke: rgb(150, 150, 172);
+}
+.about_page .about_container .read {
+  cursor: pointer;
+  margin-top: 5px;
+}
+.about_page .about_container p {
+  text-align: left;
+}
+.about_page .other_info {
+  width: 55%;
+}
+.about_page .sponsers {
+  min-height: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px gray;
+  margin-top: 5px;
+  display: flex;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  place-content: center;
+  place-items: center;
+}
+.about_page .sponsers img {
+  max-height: 100px;
+  box-shadow: 0px 0px 5px gray;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 70px;
+}
+.about_page .about_container .heading h2 {
+  font-size: 35px;
 }/*# sourceMappingURL=App.css.map */
