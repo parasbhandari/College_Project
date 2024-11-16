@@ -8,6 +8,7 @@ function OnEvent({ event }) {
         <img src={event.logo} alt="_Event_Logo" />
       </div>
       <div className="Event_Detail">
+        
         <h2>{event.name}</h2>
         <div className="Event_Description">
           <p>{event.date}</p>
