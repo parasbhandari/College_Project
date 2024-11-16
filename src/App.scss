@@ -9,6 +9,9 @@
   color: rgb(224, 224, 224);
 }
 //Global Classes for time saving
+.text-center{
+  text-align: center;
+}
 $global-blue: rgb(150, 150, 172);
 $global-font-size: 25px;
 $global-background-color: #1c1e1a;
@@ -18,7 +21,7 @@ $global-background-color: #1c1e1a;
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 60px;
   color: rgb(199, 199, 199);
 }
 
@@ -41,14 +44,20 @@ body {
 
 .global_button {
   padding: 10px;
-  font-size: $global-font-size;
+  font-size: $global-font-size*0.8;
   background-color: #535978;
   border: 2px solid #7c85ae;
-  border-radius: 10px;
+  border-radius: 50px;
   max-height: 75px;
   box-shadow: 0px 0px 10px 5px #3f497c;
 }
-
+@media (max-width: 1000px) {
+  .global_button{
+    font-size: calc($global-font-size * 0.7);
+    border-radius: 20px;
+  }
+  
+}
 .Navbar {
   display: flex;
   border: 2px solid white;
@@ -66,6 +75,12 @@ body {
     .nav-link{
       text-decoration: none;
     }
+    .Selected{
+        background-color: #021526;
+        border: 1px solid #42453f;
+        border-radius: 20px;
+        font-weight: bold;
+    }
 
     li {
       list-style-type: none;
@@ -78,7 +93,7 @@ body {
       align-items: center;
 
       &:hover {
-        background-color: #42453f;
+        background-color: #03346E;
         border: 1px solid #42453f;
         border-radius: 20px;
         cursor: pointer;
@@ -178,7 +193,7 @@ body {
   button{
     margin-top: 20px;
     padding: 15px;
-    border-radius: 30px;
+    border-radius: 50px;
     background-color: $global-background-color;
     font-size: calc($global-font-size*0.9);
   }
@@ -374,4 +389,157 @@ body {
   .about_container .heading h2 {
     font-size: 35px;
   }
+}
+
+//Event Page
+.Event_Page {
+  .p {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 2px 2px 10px rgba(164, 157, 157, 0.5);
+  }
+
+  .OnEvent {
+    max-width: 80%;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px #3f497c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px; /* Adds spacing between items */
+    margin-bottom: 70px;
+
+    .Event_Logo img {
+      padding: 10px;
+      height: 120px;
+      width: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+
+      @media (max-width: 768px) {
+        height: 100px;
+        width: 150px;
+      }
+
+      @media (max-width: 480px) {
+        height: 80px;
+        width: 120px;
+      }
+    }
+
+    .Event_Detail {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin-left: 10%;
+      align-content: center;
+
+      h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 22px;
+        }
+      }
+
+      .Event_Description {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+        gap: 10px; /* Adds spacing between elements */
+
+        p {
+          margin-right: 15%;
+
+          @media (max-width: 768px) {
+            margin-right: 5%;
+          }
+
+          @media (max-width: 480px) {
+            font-size: 14px;
+          }
+        }
+
+        .Event_btn {
+          margin-right: 15%;
+          
+        
+          button {
+            background-color: #625B71;
+            border-radius: 30px;
+            padding: 5px;
+            width: 200px; /* Fixed width */
+            height: 130px; /* Fixed height */
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease; /* Smooth transition for hover */
+          }
+
+          &:nth-child(2) button {
+            background-color: #65558F;
+          }
+          @media (max-width:900px) {
+            button{
+              margin-top: 20px;
+              padding: 15px;
+              border-radius: 30px;
+              font-size: calc($global-font-size*0.7);
+              width: 150px; /* Fixed width */
+            height: 100px;
+            }
+          }
+         
+          @media (max-width:700px) {
+            width: 120px;
+            height: 80px;
+          }
+
+     
+        }
+
+        .score {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+//EmptyData Component
+
+.Empty_Data{
+  text-align: center;
+  img{
+    height:550px;
+    width: 800px;
+
+    @media (max-width:1200px) {
+      height: 334px;
+      width: 331px;
+    }
+  }
+  h2{
+    
+    margin-top: -90px;
+    @media (max-width:1200px) {
+      margin-top: -60px;
+    }
+   
+  }
+  
 }

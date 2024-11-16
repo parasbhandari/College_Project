@@ -1,11 +1,12 @@
 import React from 'react'
-
+import OnEventList from './OnEventList'
 function Events() {
   return (
-    <div>
-      <h1>
+    <div className='Event_Page'>
+      <p className='p'>
         Ongoing Events
-      </h1>
+      </p>
+      <OnEventList/>
     </div>
   )
 }
