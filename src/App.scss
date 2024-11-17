@@ -41,7 +41,9 @@ body {
   background-color: $global-background-color;
   position: relative;
 }
-
+a,Link{
+  text-decoration: none;
+}
 .global_button {
   padding: 10px;
   font-size: $global-font-size*0.8;
@@ -475,6 +477,7 @@ body {
 
         .Event_btn {
           margin-right: 15%;
+          text-decoration: none;
           
         
           button {

@@ -38,6 +38,10 @@ body {
   position: relative;
 }
 
+a, Link {
+  text-decoration: none;
+}
+
 .global_button {
   padding: 10px;
   font-size: 20px;
@@ -423,6 +427,7 @@ body {
 }
 .Event_Page .OnEvent .Event_Detail .Event_Description .Event_btn {
   margin-right: 15%;
+  text-decoration: none;
 }
 .Event_Page .OnEvent .Event_Detail .Event_Description .Event_btn button {
   background-color: #625B71;
