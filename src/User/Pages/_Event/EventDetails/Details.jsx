@@ -1,9 +1,9 @@
-import React from 'react';
-import TeamInEvent from './TeamInEvent';
-import {useState} from 'react';
-import Button from '../../Components/Button';
-import EventDetailFooter from './EventDetailFooter';
-import Cup from '../../../assets/Cup.png'
+import React from "react";
+import TeamInEvent from "../TeamInEvent";
+import { useState } from "react";
+import Button from "../../../Components/Button";
+import EventDetailFooter from "./EventDetailFooter";
+import Cup from "../../../../assets/Cup.png";
 function Details() {
   const Teams = [
     {
@@ -88,37 +88,34 @@ function Details() {
       </div>
       <div className="button-container">
         {visibleTeams < Teams.length ? (
-           <div onClick={showMoreTeams}>
-           <Button name="Show More ..."/>
+          <div onClick={showMoreTeams}>
+            <Button name="Show More ..." />
           </div>
         ) : (
           <div onClick={showLessTeams}>
-           <Button name="Show Less"/>
+            <Button name="Show Less" />
           </div>
         )}
       </div>
-      <div className='Prize_Section'>
-      <h2>
-        Prizes
-      </h2>
-      <div className='Main_Prize'>
-        <div className='first'>
-        <img src={Cup} alt="1st prize" />
-        <p>Rs 1 Lakh</p>
-        <p className='cup'>1st</p>
+      <div className="Prize_Section">
+        <h2>Prizes</h2>
+        <div className="Main_Prize">
+          <div className="first">
+            <img src={Cup} alt="1st prize" />
+            <p>Rs 1 Lakh</p>
+            <p className="cup">1st</p>
+          </div>
+          <div className="second">
+            <p>2nd</p>
+            <p>Rs 50000</p>
+          </div>
+          <div className="third">
+            <p>3rd</p>
+            <p>Rs 30000</p>
+          </div>
         </div>
-        <div className='second'>
-          <p>2nd</p>
-          <p>Rs 50000</p>
-        </div>
-        <div className='third'>
-          <p>3rd</p>
-          <p>Rs 30000</p>
-        </div>
-        
       </div>
-      </div>
-      <EventDetailFooter/>
+      <EventDetailFooter />
     </div>
   );
 }

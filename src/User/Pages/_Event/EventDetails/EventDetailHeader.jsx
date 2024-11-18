@@ -1,6 +1,6 @@
 import React from "react";
-import Banner from "../../../assets/LeagueBanner.png";
-import Logo from "../../../assets/LeagueLogo.png";
+import Banner from "../../../../assets/LeagueBanner.png";
+import Logo from "../../../../assets/LeagueLogo.png";
 
 function EventDetailHeader() {
   return (

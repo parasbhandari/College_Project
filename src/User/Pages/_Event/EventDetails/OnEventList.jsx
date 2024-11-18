@@ -1,6 +1,6 @@
-import React from 'react';
-import OnEvent from './OnEvent';
-import EmptyData from '../../Components/EmptyData';
+import React from "react";
+import OnEvent from "../OnEvent";
+import EmptyData from "../../../Components/EmptyData";
 
 function OnEventList() {
   // Mock data for demonstration; replace with actual data or props
@@ -15,16 +15,14 @@ function OnEventList() {
       date: "1 Sep - 15 Sep",
       logo: "https://example.com/cricket-logo.png",
     },
-  ];; // Replace this with the actual data source
+  ]; // Replace this with the actual data source
 
   return (
     <div>
       {events.length === 0 ? (
         <EmptyData />
       ) : (
-        events.map((event, index) => (
-          <OnEvent key={index} event={event} />
-        ))
+        events.map((event, index) => <OnEvent key={index} event={event} />)
       )}
     </div>
   );

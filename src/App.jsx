@@ -4,7 +4,7 @@ import Home from "./User/Pages/Home/Home";
 import './App.css';
 import {Routes, Route} from 'react-router-dom'
 import Events from "./User/Pages/_Event/Events";
-import EventDetails from "./User/Pages/_Event/EventDetails";
+import EventDetails from "./User/Pages/_Event/EventDetails/EventDetails";
 import LeaderBoard from "./User/Pages/LeaderBoard/LeaderBoard";
 import Match from "./User/Pages/Match/Match";
 import Sponsors from "./User/Pages/Sponsors/Sponsors";
