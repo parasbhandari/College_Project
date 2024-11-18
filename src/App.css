@@ -484,4 +484,172 @@ a, Link {
   .Empty_Data h2 {
     margin-top: -60px;
   }
+}
+
+.EventDetails .Header {
+  margin-top: 50px;
+  padding-bottom: 20px; /* Prevent margin collapse with .Body */
+  position: relative;
+}
+.EventDetails .Header .Banner {
+  text-align: center;
+  position: relative;
+}
+.EventDetails .Header .Banner img {
+  width: 80%;
+  max-width: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1200px) {
+  .EventDetails .Header .Banner img {
+    width: 80%;
+  }
+}
+.EventDetails .Header .Logo {
+  position: absolute;
+  left: 15%;
+  bottom: -5%;
+  width: 20%;
+}
+.EventDetails .Header .Logo img {
+  max-width: 200px;
+  width: 200px;
+}
+@media (max-width: 1400px) {
+  .EventDetails .Header .Logo img {
+    width: 150px;
+  }
+}
+@media (max-width: 1200px) {
+  .EventDetails .Header .Logo img {
+    width: 100px;
+  }
+}
+.EventDetails .Body {
+  overflow-x: hidden;
+  padding-top: 50px; /* Use padding instead of margin to prevent layout shifts */
+}
+.EventDetails .Body .item {
+  position: relative;
+  left: 10%;
+}
+.EventDetails .Body .item ul {
+  list-style-type: none;
+  display: flex;
+  gap: 100px; /* Add spacing between items */
+  font-size: 20px;
+}
+.EventDetails .Body .item ul .active {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+.EventDetails .Body .item ul li:hover {
+  cursor: pointer;
+}
+.EventDetails .Body .content {
+  position: relative;
+  left: 10%;
+}
+.EventDetails .Body .content .Detail {
+  margin-top: 50px;
+}
+.EventDetails .Body .content h2 {
+  margin-top: 30px;
+}
+.EventDetails .Body .content .Team_In_Event {
+  margin-top: 30px;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.EventDetails .Body .content .Team_In_Event .TeamLogo {
+  width: 20%;
+}
+.EventDetails .Body .content .Team_In_Event .TeamLogo img {
+  border-radius: 20px;
+}
+@media (max-width: 1000px) {
+  .EventDetails .Body .content .Team_In_Event .TeamLogo img {
+    width: 90px;
+  }
+}
+.EventDetails .Body .content .button-container {
+  margin-top: 30px;
+}
+.EventDetails .Body .content .button-container .global_button {
+  background-color: #1c060f;
+  width: 300px;
+}
+.EventDetails .Body .content .Prize_Section {
+  margin-top: 50px;
+  max-width: 100%;
+}
+.EventDetails .Body .content .Prize_Section h2 {
+  font-size: xx-large;
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize {
+  margin-top: 30px;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize p {
+  font-size: 32.5px;
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize .first {
+  order: 2; /* Second in order */
+  margin: 0 50px;
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize .first p {
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize .first .cup {
+  bottom: 180px;
+  color: black;
+  font-weight: 800;
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize .second {
+  order: 1; /* First in order 
+*/
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize .third {
+  order: 3; /* Third in order */
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize .second, .EventDetails .Body .content .Prize_Section .Main_Prize .third {
+  border: 3px solid white;
+  border-radius: 20px;
+  height: 200px;
+  padding: 50px;
+}
+.EventDetails .Body .content .Prize_Section .Main_Prize .second border- p, .EventDetails .Body .content .Prize_Section .Main_Prize .third border- p {
+  text-align: center;
+}
+@media (max-width: 1400px) {
+  .EventDetails .Body .content .Prize_Section .Main_Prize {
+    max-width: 80%;
+  }
+}
+.EventDetails .Footer {
+  margin: 0 10%;
+}
+.EventDetails .Footer h2 {
+  margin: 20px 0;
+}
+.EventDetails .Footer .Contact_Detail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.EventDetails .Footer .Contact_Detail p {
+  margin: 10px 0;
 }/*# sourceMappingURL=App.css.map */
