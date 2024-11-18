@@ -2,6 +2,7 @@ import React from 'react';
 import TeamInEvent from './TeamInEvent';
 import {useState} from 'react';
 import Button from '../../Components/Button';
+import EventDetailFooter from './EventDetailFooter';
 import Cup from '../../../assets/Cup.png'
 function Details() {
   const Teams = [
@@ -117,7 +118,7 @@ function Details() {
         
       </div>
       </div>
-      
+      <EventDetailFooter/>
     </div>
   );
 }

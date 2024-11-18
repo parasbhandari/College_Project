@@ -638,7 +638,7 @@ a, Link {
   }
 }
 .EventDetails .Footer {
-  margin: 0 10%;
+  max-width: 80%;
 }
 .EventDetails .Footer h2 {
   margin: 20px 0;
