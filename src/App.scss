@@ -730,4 +730,38 @@ a,Link{
    }
   }
 }
+//TieSheet
+.TieSheet {
+  position: relative;
+  left: -10%;
+  margin-top: 100px;
+  
+  p{
+    text-align: center;
+  }
+  hr{
+    color:#7c85ae;
+  }
+.structure, 
+.match-list {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Divide into 6 equal columns */
+  text-align: center; /* Center-align the text inside each grid item */
+  .match{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-around;
+  }
+}
 
+.structure {
+  font-weight: bold; /* Optional: Make headers bold */
+}
+
+.match-list {
+  grid-auto-flow: row; /* Ensure items stack in a row manner */
+  align-items: center; /* Vertically align items */
+}
+}

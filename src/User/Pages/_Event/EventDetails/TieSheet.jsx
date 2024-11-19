@@ -1,8 +1,11 @@
 import React from 'react'
-
+import MatchList from './MatchList'
 function TieSheet() {
   return (
-    <div>TieSheet</div>
+    <div className='TieSheet'>
+      <MatchList/>
+     
+    </div>
   )
 }
 

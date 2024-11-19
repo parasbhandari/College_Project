@@ -652,4 +652,37 @@ a, Link {
 }
 .EventDetails .Footer .Contact_Detail p {
   margin: 10px 0;
+}
+
+.TieSheet {
+  position: relative;
+  left: -10%;
+  margin-top: 100px;
+}
+.TieSheet p {
+  text-align: center;
+}
+.TieSheet hr {
+  color: #7c85ae;
+}
+.TieSheet .structure,
+.TieSheet .match-list {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Divide into 6 equal columns */
+  text-align: center; /* Center-align the text inside each grid item */
+}
+.TieSheet .structure .match,
+.TieSheet .match-list .match {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+.TieSheet .structure {
+  font-weight: bold; /* Optional: Make headers bold */
+}
+.TieSheet .match-list {
+  grid-auto-flow: row; /* Ensure items stack in a row manner */
+  align-items: center; /* Vertically align items */
 }/*# sourceMappingURL=App.css.map */

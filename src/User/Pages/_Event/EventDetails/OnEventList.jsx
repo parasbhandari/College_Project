@@ -20,7 +20,7 @@ function OnEventList() {
   return (
     <div>
       {events.length === 0 ? (
-        <EmptyData />
+        <EmptyData message="No Ongoing Event Found"/>
       ) : (
         events.map((event, index) => <OnEvent key={index} event={event} />)
       )}
