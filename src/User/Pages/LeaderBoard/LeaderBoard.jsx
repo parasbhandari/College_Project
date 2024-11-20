@@ -17,33 +17,41 @@ function LeaderBoard() {
 
       {/* Mode Selection */}
       <div className="mode">
-        <div className={`league ${mode === "league" ? "active" : ""}`} onClick={() => setMode("league")}>
+        <div
+          className={`league ${mode === "league" ? "active" : ""}`}
+          onClick={() => setMode("league")}
+        >
           <Button name="Leagues" />
         </div>
-        <div className={`knockout ${mode === "knockout" ? "active" : ""}`} onClick={() => setMode("knockout")}>
+        <div
+          className={`knockout ${mode === "knockout" ? "active" : ""}`}
+          onClick={() => setMode("knockout")}
+        >
           <Button name="Knockouts" />
         </div>
       </div>
-        <div className="select_league">
-          <select
-            name="league"
-            id="options"
-            value={selectedLeague}
-            onChange={handleLeagueChange}
-            style={{ padding: "5px", fontSize: "16px" }}
-          >
-            <option value="" disabled>
-              Select League
-            </option>
-            <option value="chitwan">Chitwan Premier League</option>
-            <option value="kathmandu">Kathmandu Premier League</option>
-            <option value="butwal">Butwal Premier League</option>
-          </select>
-        </div>
-      
 
-      {/* Display League or Knockout Component */}
-      {mode === "league" ? <League /> : <Knockout />}
+      {/* League Selection */}
+      <div className="select_league">
+        <select
+          name="league"
+          id="options"
+          value={selectedLeague}
+          onChange={handleLeagueChange}
+          style={{ padding: "5px", fontSize: "16px" }}
+        >
+          <option value="" disabled>
+            Select League
+          </option>
+          <option value="chitwan">Chitwan Premier League</option>
+          <option value="kathmandu">Kathmandu Premier League</option>
+          <option value="butwal">Butwal Premier League</option>
+        </select>
+      </div>
+
+      {/* Render Components Dynamically */}
+      {mode === "league" && selectedLeague && <League />}
+      {mode === "knockout" && selectedLeague && <Knockout />}
     </div>
   );
 }
