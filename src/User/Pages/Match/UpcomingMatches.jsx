@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TableStructure from "./TableStructure";
-const Match = () => {
-  const navigate = useNavigate();
+const UpcomingMatches = () => {
 
   // State to track the selected event
   const [selectedEvent, setSelectedEvent] = useState("All");

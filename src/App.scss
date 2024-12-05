@@ -960,11 +960,12 @@ a,Link{
   margin-top: 200px;
   button{
     font-size: 40px;
+    font-weight: 900;
     padding: 30px;
     border-radius: 10px;
     margin: 0px  50px;
     max-height: 200px;
-    background-color: #3C3D37;
+    background-color: $global-background-color;
     @media (max-width:1000px) {
       max-height: 120px;
       font-size: 25px;

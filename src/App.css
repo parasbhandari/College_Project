@@ -864,11 +864,12 @@ for better contrast */
 }
 ._match button {
   font-size: 40px;
+  font-weight: 900;
   padding: 30px;
   border-radius: 10px;
   margin: 0px 50px;
   max-height: 200px;
-  background-color: #3C3D37;
+  background-color: #1c1e1a;
 }
 @media (max-width: 1000px) {
   ._match button {
