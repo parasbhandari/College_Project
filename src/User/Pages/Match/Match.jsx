@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Button from '../../Components/Button'
 function Match() {
   return (
-    <div>Match</div>
+    <div className='_match'>
+    <Button name="Upcoming Matches"></Button>
+    <Button name="Ongoing Matches" className="on"></Button>
+    </div>
   )
 }
 

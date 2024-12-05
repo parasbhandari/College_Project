@@ -952,3 +952,186 @@ a,Link{
     }
   }
 }
+//Match Page
+ ._match{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  button{
+    font-size: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0px  50px;
+    max-height: 200px;
+    background-color: #3C3D37;
+    @media (max-width:1000px) {
+      max-height: 120px;
+      font-size: 25px;
+      padding: 15px;
+    }
+    
+  } 
+ button:hover{
+  transform: scale(1.1);
+ }
+
+
+
+ }
+
+//Upcoming Matches
+.container{
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  .heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Filter */
+  .filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .dropdown {
+    width: 50%;
+    padding: 50px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Table Container */
+  .table-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  }
+  
+  .match-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222;
+    min-width: 600px; /* Ensure the table doesn’t shrink too much */
+  }
+  
+  .match-table th,
+  .match-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+ 
+  
+  .match-table th {
+    background-color: #333;
+  }
+  
+  .match-table tr:hover {
+    background-color: #444;
+  }
+  
+  /* Match Column */
+  .match-column {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Adjusts layout for smaller screens */
+  }
+  
+  .team-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  .vs {
+    margin: 0 5px;
+    font-weight: bold;
+    color: #aaa;
+  }
+  
+  /* Actions */
+  .action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.2s;
+  }
+  
+  .action-button:hover {
+    color: #fff;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    /* Adjust Heading */
+    .heading {
+      font-size: 2rem;
+    }
+  
+    /* Filter Dropdown */
+    .dropdown {
+      width: 100%; /* Full width dropdown on small screens */
+      font-size: 0.9rem;
+    }
+  
+    /* Table */
+    .match-table th,
+    .match-table td {
+      padding: 10px; /* Reduce padding for smaller screens */
+      font-size: 0.9rem;
+    }
+  
+    /* Match Column Adjustments */
+    .match-column {
+      flex-direction: column; /* Stack teams vertically on smaller screens */
+      align-items: flex-start;
+    }
+  
+    .team-logo {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .vs {
+      margin: 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Table Adjustments for Extra Small Screens */
+    .match-table th,
+    .match-table td {
+      font-size: 0.8rem;
+    }
+  
+    /* Actions */
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  
+    /* Ensure Dropdown and Table fit the screen */
+    .dropdown {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
+  }
+}
