@@ -3,7 +3,7 @@ import Button from '../../Components/Button';
 import { useNavigate } from 'react-router-dom';
 
 function Match() {
-  const navigate = useNavigate(); // Use the hook inside the component
+  const navigate = useNavigate(); 
 
   const handleClick = (match) => {
     if (match === 'upcoming') navigate('/Match/UpcomingMatches');
